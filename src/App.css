@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  --sb-track-color: #232e33;
+  --sb-thumb-color: #211644;
+  --sb-size: 14px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+body {
+  background-color: rgb(16, 16, 40);
+  color: rgb(247, 247, 247);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-family: Outfit;
+}
+
+.odevler {
+  background-color: rgb(30, 41, 57);
+  border: 1px solid rgb(52, 58, 72);
+  padding: 30px;
+  width: 60%;
+  margin-top: 100px;
+  border-radius: 20px;
+}
+
+.odev {
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  border: 1px solid rgb(52, 58, 72);
+}
+.odevbaslik
+{
+  height: 55%;
+}
+.odevbaslik p {
+  margin-left: 20px;
+  color: rgb(205, 208, 212);
+}
+
+.odev p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+.odevbilgi
+{
+  margin-left: 10px;
+}
+.odevbilgi p {
+  font-size: 12px;
+  font-weight: 100;
+  color: #adadad;
+}
+
+.odevaciklama {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.odevbuton {
+  margin-left: 500px;
+  margin-right : 20px;
+  background-color: rgb(106, 158, 90);
+  border-radius: 20px;
+}
+
+.circleicon {
+  scale: 0.2;
+  color: rgb(97, 97, 97);
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  border: 1px solid rgb(52, 58, 72);
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+.headerRight
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.headerRight *
+{
+  margin-right: 5px;
+}
+.anasayfa
+{
+  display: flex;
+  justify-content: space-around;
+}
+.odevBolumu{
+  border: 1px solid  rgb(52, 58, 72);
+  padding: 15px;
+  border-radius: 20px;
+  height: 500px;
+  overflow-y: auto;
+  margin: 0px 50px 50px 50px;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.duyuruBolumu
+{
+  border: 1px solid  rgb(52, 58, 72);
+  padding: 15px;
+  border-radius: 20px;
+  height: 500px;
+  overflow-y: auto;
+  margin: 0px 50px 50px 50px;
+  width: 65%;
+}
+.duyuru
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.grafikBolumu
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid  rgb(52, 58, 72);
+  padding: 15px;
+  border-radius: 20px;
+  height: 500px;
+  overflow-y: auto;
+  margin: 0px 50px 50px 50px;
+  width: 80%;
+}
+.takvimBolumu
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid  rgb(52, 58, 72);
+  padding: 15px;
+  border-radius: 20px;
+  height: 500px;
+  overflow-y: auto;
+  margin: 0px 50px 50px 50px;
+  width: 20%;
+}
+
+.derslercontainer
+{
+  background-color: #b2bfcf;
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  min-width: 520px;
+  height: auto;
+  border: 1px solid  rgb(52, 58, 72);
+  border-radius: 20px;
+}
+.dersSelect
+{
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #a0b5cf;
+  margin-top: 25px;
+}
+.derstext
+{
+  color: #101028;
+}
+.odevozetler {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  margin-right: auto;
+  padding: 10px;
+}
+.butonlar_denemeler {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.btndva{
+  width: 100%;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.buton_denemeler {
+  width: 100%;
+}
+.sonucdataviews {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.sonuc_kart {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sonuc_baslik {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.sonuc_detay {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sonuc_detay p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.dogru {
+  color: green;
+  font-weight: bold;
+}
+
+.yanlis {
+  color: red;
+  font-weight: bold;
+}
+
+.bos {
+  color: orange;
+  font-weight: bold;
+}
+
+.net {
+  color: blue;
+  font-weight: bold;
+}
+.deneme_accordion{
+  margin-top: 20px;
+}
